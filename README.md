@@ -1,6 +1,6 @@
 # next15-canary-bug-reproduction
 
-It is a bug reproduction for **`next@15.2.0-canary.57`** and still continues in `next@15.2.0-canary.70`.
+It is a bug reproduction for **`next@15.2.0-canary.57`** and still continues in **`next@15.2.0-canary.70`**.
 
 It throws the error below in only development mode, not in production.
 
@@ -29,12 +29,14 @@ No problem with the Next.js versions (tested)
 
 `npm run build` and `npm run start` --> open browser and click the articles, see there is NO error in production mode.
 
+Then,
+
 ```bash
 npm i -S next@v15.2.0-canary.56
 rm -rf .next && npm run dev
 ```
 
-and see there is NO error in development and production modes.
+and see **there is NO error** in development and production modes.
 
 Then,
 
@@ -43,7 +45,7 @@ npm i -S next@v15.2.0-canary.57
 rm -rf .next && npm run dev
 ```
 
-and see the TypeError in development mode.
+and see **the TypeError** in development mode.
 
 ### What is `next-mdx-remote-client`
 
@@ -53,7 +55,7 @@ It works well with all version of `next` for one year almost.
 
 ### Log in the console related with the error
 
-I put it in the end because of long:
+I put it in the end because of it is long:
 
 ```bash
 [Error] TypeError: Cannot read properties of undefined (reading 'stack')
