@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
+import recmaMdxImportReact from "recma-mdx-import-react";
 
 import { getMarkdownFromSlug, getMarkdownFiles, toSlug } from "@/utils/file";
 import ErrorComponent from "@/components/ErrorComponent";
@@ -37,6 +38,7 @@ export default async function Post({ params }: Props) {
           mdxOptions: {
             format,
             baseUrl: import.meta.url,
+            recmaPlugins: [recmaMdxImportReact],
           },
         }}
         components={{
